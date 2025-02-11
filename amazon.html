@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience the next generation of online shopping with Amazon 2.0">
+  <title>Amazon 2.0 - Next Generation Shopping</title>
+  <link rel="icon" href="https://www.amazon.com/favicon.ico" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="amazon.css">
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon">&#9776;</div>
+    <div class="logo">AMAZON 2.0</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search with voice, image, or text...">
+    </div>
+    <div style="position: relative;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+      </svg>
+      <div class="cart-count">3</div>
+      <button class="history-btn">Order History</button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#" class="filter-btn">All</a></li>
+      <li><a href="#" class="filter-btn">Electronics</a></li>
+      <li><a href="#" class="filter-btn">Home &amp; Garden</a></li>
+      <li><a href="#" class="filter-btn">Fashion</a></li>
+      <li><a href="#" class="filter-btn">Sports</a></li>
+    </ul>
+  </nav>
+
+  <div class="category-filter">
+    <button class="filter-btn">All</button>
+    <button class="filter-btn">Electronics</button>
+    <button class="filter-btn">Home &amp; Garden</button>
+    <button class="filter-btn">Fashion</button>
+    <button class="filter-btn">Sports</button>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <!-- Products will be dynamically inserted here -->
+  </div>
+
+  <!-- Product Details Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <button class="close-modal">&#xd7;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="cartModal">
+    <div class="modal-content">
+      <button class="close-modal">&#xd7;</button>
+      <h2>Shopping Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total">
+        <h3>Total: &#x24;<span id="cartTotal">0</span></h3>
+      </div>
+      <button class="buy-btn" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div class="modal" id="historyModal">
+    <div class="modal-content">
+      <button class="close-modal">&#xd7;</button>
+      <h2>Order History</h2>
+      <div id="orderHistory"></div>
+    </div>
+  </div>
+
+  <div class="ar-view">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)">
+      <path d="M9.5,6.5v3h-3v-3H9.5 M11,5H5v6h6V5L11,5z M9.5,14.5v3h-3v-3H9.5 M11,13H5v6h6V13L11,13z M17.5,6.5v3h-3v-3H17.5 M19,5h-6v6 h6V5L19,5z M13,13h1.5v1.5H13V13z M14.5,14.5H16V16h-1.5V14.5z M16,13h1.5v1.5H16V13z M17.5,14.5H19V16h-1.5V14.5z M16,16h1.5v1.5 H16V16z M17.5,17.5H19V19h-1.5V17.5z M13,16h1.5v1.5H13V16z M14.5,17.5H16V19h-1.5V17.5z"/>
+    </svg>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2023 Amazon 2.0. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+<script src="amazon.js"></script>
+</body></html>
+

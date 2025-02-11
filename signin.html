@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn" onclick="window.location.href='../home/amazon.html'">Log In</button>
+            <p class="error-message" id="errorMessage"></p>
+            <p class="form-footer">
+                Don't have an account? <a href="signup.html">Sign up</a>
+            </p>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Basic validation
+                if (username.trim() === '' || password.trim() === '') {
+                    errorMessage.textContent = 'Please enter both username and password.';
+                    return;
+                }
+
+                // Here you would typically send a request to your server to authenticate the user
+                console.log('Login attempt:', { username, password });
+                errorMessage.textContent = '';
+                
+                // Navigate to amazon.html after successful login
+                window.location.href = '../home/amazon.html';
+
+                // Remove the form reset since we're navigating away
+                // loginForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
